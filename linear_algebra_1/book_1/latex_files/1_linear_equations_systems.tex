@@ -1,0 +1,194 @@
+%
+%  1_linear_equations_systems.tex
+%  latex_files
+%
+%  Created by Eyal Shukrun on 09/08/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,verbatim,graphicx,microtype,upquote,units,booktabs,siunitx,xcolor}
+\usepackage{cjhebrew}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{mymacros}
+
+
+\title{Linear Equations Systems}
+\date{\today}
+\author{Eyal Shukrun}
+
+\begin{document}
+\section{Ensemble}
+(F, +, *) est un ensemble si il respecte ces 6 axiomes: \\
+
+\begin{itemize}
+  \item F est fermé sur + et *. 
+  \item Association de + et *
+  \item + et * sont inversables
+  \item Il existe des elements neutres pour + et * \textbf{uniques et non égaux}.
+  \item * se distribue sur +
+  \item $ \forall x \neq 0$ il existe $x^{-1}$
+\end{itemize}
+
+\subsection{$Z_n$}
+L'ensemble $Z_n$ est un ensemble qui contient tous les elements de $Z$ de 0 a $n$.
+\begin{enumerate}
+  \item $a +_F b = a+b \mod n$ 
+  \item $a *_F b = a*b \mod n$ 
+\end{enumerate}
+
+\subsection{Comment trouver rapidement le résultat}
+Faire le calcul normal, puis ajouter/enlever $n$ jusqu'a tomber sur un chiffre dans l'ensemble $\{0, \ldots, n\}$.
+  
+  
+
+\subsection{Propriétés des scalaires}
+
+Tous les nombres d'un champs sont nommés scalaires.  
+
+\begin{itemize}
+ \item 0 et 1 sont uniques
+ \item Pour chaque nombre il existe un seul nombre inverse et contraire
+
+ \item $a*b = 0 \implies a=0 \lor b=0$
+\end{itemize} 
+
+\subsection{Demonstrations}
+ \paragraph{Prouvons que $a*b = 0 \implies a=0 \lor b=0$:}
+   
+
+Si $a \neq 0 \land b \neq 0$ alors $a*b=0 \equiv a^{-1}*a*b = a^{-1}*0 \equiv b = 0 \equiv F$, donc a ou b doit etre égal a 0.  
+
+\subsection{Chemins de solutions}
+
+\paragraph{Comment trouver le 0 et le 1:}
+On a juste a resoudre b dans les equations $a+b = a$ et $a*b = a$, il doit n'y avoir qu'une seule solution de b pour tous les a.  
+
+\paragraph{Comment trouver l'inverse et le contraire:} 
+Il faut d'abord connaitre le 0 et le 1, puis resoudre b dans les equations $a+b = 0$ et $a*b = 1$, il ne doit ici aussi n'y avoir qu'une seule solution, (attention, b sera egal a $-a$, pas $a$, et les symboles +, *, 0 et 1 sont dependants du champs duquel on parle).
+  
+\section{Equations linéaires}
+Une équation Linéaire est une équation polynomiale qui ne contient pas de multiplications d'éléments ($xy$) ou d'éléments seuls avec une puissance ($z^3$). Ainsi, elle est de ce format:
+\[
+  a_1 * x_1  + a_2 * x_2 + \ldots + a_n * x_n = b
+.\]
+
+\subsection{Appellations}
+\begin{itemize}
+  \item $x$ - variables
+  \item $a$ Mekadmim
+  \item Mekadmim hofshiim$b$ 
+  \item  Equation zero - Equation ou tous les mekadmim sont $0_F$
+  \item Solution privee - solutions sous forme de nombres
+  \item Solution generale - solutions pour chaque variable sous forme de fonction avec des parametres, par exemple $(\frac{7}{2}+\frac{3}{2}t, t)$, on peut egalement la factoriser pour obtenir $(\frac{7}{2}, 0) + t(\frac{3}{2}, 1)$
+
+\end{itemize}
+
+\subsection{Propriétés}
+\begin{enumerate}
+  \item Si une fonction linéaire a des paramètres provenant d'un ensemble A et une solution sur un autre ensemble B, alors elle a aussi une solution sur A.
+\end{enumerate}
+
+\section{Systeme d'equations lineaires}
+
+\subsection{Appellations}
+\begin{itemize}
+  \item $(v_1, \ldots, v_n) \epsilon  F^n$ est la solution de l'equation si $(x_1, \ldots, x_n) = (v_1, \ldots, v_n)$ resoud toutes les equations.
+  \item  Ordre du systeme $(m, n)$ - $m$ est le nombre d'equations, et $n$ est le nombre de variables.  
+    \item Forme standard: Comme une matrice
+  \item \cjRL{`qbyt}: Systeme solvable.  
+    \item  Equation zero: $0*x_1 + 0*x_2 + 0*x_3 = 0$, n'importe quel groupe la resoud.
+    \item Systeme homogene: tous les mitkadmim hofshiim sont $0_F$ (il est forcement solvable).
+\end{itemize}
+
+\subsection{Propriétés}
+\begin{enumerate}
+  \item Si une equation lineaire ressemble a $0*x_1 + 0*x_2 + 0*x_3 = b(\neq_0)$ alors elle n'a pas de solution.
+  \item  Un systeme homogene est forcement solvable par la solution triviale $(0, 0,\ldots, 0)$.
+  \item Dans un systeme homogene, si $c$ est une solution, alors  $sc$ (s scalaire) l'est aussi, et si  $d$ est une solution, alors $c + d$ aussi
+\end{enumerate}
+
+\subsection{Systemes equivalents}
+
+On peut appliquer les operations suivantes sur un systeme sans le modifier:
+\begin{enumerate}
+  \item Changer les equations de place
+  \item Additioner une equation avec une autre (ou avec une multiplication d'une autre par un scalaire)
+  \item Multiplier une equation entiere par un scalaire qui n'est pas $0_F$
+\end{enumerate}
+
+\textbf{Attention: Ne pas faire d'opération $R_A$ - $R_B$ si $R_A$ a des 0 sur lesquels $R_B$ a des chiffres !}
+
+\section{Matrices de coefficients}
+Avec cette matrice, on peut resoudre l'equation, en essayant d'avoir des parametres que sur une sur ligne.  
+
+\subsection{Exemple}
+
+\begin{align*}
+  a_{1_1}x_1 + a_{1_2}x_2 + \ldots + a_{1_n}x_n &= b_1\\
+  a_{2_1}x_1 + a_{2_2}x_2 + \ldots + a_{2_n}x_n &= b_2\\
+  .         .           . \\
+  a_{3_n}x_1 + a_{3_n}x_2 + \ldots + a_{n_n}x_n &= b_n\\
+\end{align*}
+
+Donne: 
+
+\begin{elimination}[1]{4}{1.75em}{1.1}
+    \eliminationstep
+    {
+      a_{1_1} & a_{1_2}  &  \ldots & a_{1_n} & b_1\\
+    a_{n_1} &a_{2_2}  &  \ldots & a_{2_n} & b_2\\
+      \ldots & \ldots &  \ldots & \ldots & \ldots \\
+      a_{m_1} &a_{m_2}  &  \ldots & a_{m_n} & b_m\\
+    }
+    {
+    }
+\end{elimination}
+
+\subsection{Appellations}
+\begin{itemize}
+  \item Element ouvreur (\cjRL{'ybr hptw.h}): Premier element de chaque ligne.
+  \item  Variables liées et variables libres: une variable liée est une variable qui est attachée a un element ouvreur au moins une fois dans la matrice (on parle ici du $x$). Une fois que la matrice est en escalier, on peut exprimer chaque variable liée a l'aide des variables libres.
+  \item Matrice escalier (\cjRL{m.try.sh mdrgwt}): Toutes les lignes zero sont en bas, et chaque element ouvreur et a droite de celui de la ligne d'au dessus. Le systeme est donc appelé système escalier (\cjRL{m`rkt mdwrg}).
+    \item  Matrice canonique: Tous les elements ouvreurs sont des 1 et ils sont seuls dans leur colonne. Il n'y a qu'une et unique matrice canonique pour un système linéaire. On peut donc s'en servir pour regarder si deux matrices sont équivalentes. 
+    \item  Matrice identité (\cjRL{y.hydh}) d'ordre n: Matrice de forme $n*n$ avec que des 0 sauf des 1 dans la diagonale principale (\cjRL{'lkswN hr'/sy}).
+    \item Système homogène: Tous les mekadmim hofshiim ($b$) sont 0, ces systèmes ont au moins une solution (la solution \textbf{triviale} $(0, \ldots, 0)$), si le nombre de variables est plus grand que le nombre d'équations alors le systeme a aussi une solution non triviale. Un système homogène peut être représenté par une matrice réduite (une matrice qui ne contient pas les mekadmim hofshiim ($b$)).
+\end{itemize}
+
+\subsection{Mettre une matrice en escalier}
+\begin{enumerate}
+  \item Mettre tout en haut la ligne avec l'ouvreur le plus a gauche
+    \item Utiliser cette ligne du haut pour tondre cette colonne, de sorte a ce que la ligne du haut soit la seule a avoir un ouvreur sur cette colonne
+      \item Recommencer en ignorant la premiere ligne
+\end{enumerate}
+
+\subsection{Mettre une matrice en canonique}
+\begin{enumerate}
+  \item La mettre en escalier
+  \item Transformer l'ouvreur de la dernière ligne en 1 en multipliant la ligne par son inverse
+  \item Tondre toute la colonne grace a lui
+\end{enumerate}
+  
+
+\subsection{Chemins de solution}
+\begin{itemize}
+  \item Regarder si deux matrices sont équivalentes: les réduire a leur forme canonique et regarder si elles sont pareilles. 
+\end{itemize}
+
+\section{Nombre de solutions d'un système linéaire}
+
+Un système linéaire peut soit ne pas avoir de solutions, soit n'en avoir qu'une seule et unique, soit en avoir une infinité (si l'ensemble de definition est fini). 
+\begin{enumerate}
+  \item Pas de solution: On peut le determiner si une matrice a une ligne de contradiction, si une matrice escalier n'a pas de ligne contradictoire, normalement elle a au moins une solution (\cjRL{`qbyt})
+  \item Une solution: Toutes les variables sont des variables liées donc la matrice canonique reduite (\cjRL{m.swm.smt}) est une matrice identité. D'ailleurs, \textbf{si une matrice canonique réduite est une matrice identité, alors tous les systèmes dont elle peut être la matrice (peu importe les b) ont une solution unique.} On en déduit que pour un système homogène la matrice réduite a soit des lignes de 0 (une solution ou plus) ou alors est une matrice identité (donc solution unique triviale$^{[1.14.4]}$).
+    \item Si elle a des variables libres, alors elle a un nombre infini de solutions sur un ensemble infini, et $| F |^{libres}$ solutions sur un ensemble  $F$ fini.
+\end{enumerate}
+
+  
+  
+
+\end{document}
+

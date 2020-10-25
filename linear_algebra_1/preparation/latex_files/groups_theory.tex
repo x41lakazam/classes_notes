@@ -1,0 +1,163 @@
+%
+%  groups_theory.tex
+%  preparation
+%
+%  Created by Eyal Shukrun on 08/22/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+\documentclass[12pt]{article}
+
+\usepackage{amsmath, amsfonts, amssymb}
+
+\usepackage{cjhebrew}
+\usepackage[utf8x]{inputenc}
+
+\title{Groups Theory}
+\date{\today}
+
+\author{Eyal Shukrun}
+
+\begin{document}
+\maketitle
+
+\section{Groupes Universels}
+  
+\subsection{Reels ($\mathbb{R}$)}
+Tous les nombres réels.
+\subsection{Rationels ($\mathbb{Q}$)}
+Tous les nombres qui peuvent être exprimés en fraction.
+\subsection{Integers ($\mathbb{Z}$)}
+Tous les nombres entiers.
+\subsection{Naturels ($\mathbb{N}$)}
+Tous les nombres entiers positifs.
+\\
+\\
+\textbf{Ainsi: $\mathbb{R} > \mathbb{Q} > \mathbb{Z} > \mathbb{N}$}
+\\
+\section{Notations}
+\subsection{Est compris dans}
+Si un élément a est compris dans un ensemble E, cela se note $a \in E$.
+ 
+\subsection{Implications}
+Si deux éléments ont un rapport logique (si A alors B), on utilise les flèches afin de le noter:\\
+Si A alors B: $A \Rightarrow B$\\
+Si B alors A: $A \Leftarrow B$\\
+Double implication: $A \leftrightarrow B$\\
+  
+  
+\section{Definitions}
+  
+\subsection{Groupe vide (\O)}
+Il n'existe qu'un seul groupe vide, noté \O, il ne contient aucun élément.
+
+\subsection{Ensembles egaux}
+$A = B$ si tous les éléments de A sont presents dans B et inversement.  \\
+\textbf{Attention:} Le nombre d'occurences n'importe pas.
+ 
+\subsection{Ensemble compris}
+On dit que A est compris dans B si tous les éléments de A se trouvent dans B.\\
+{\em Notation}: $A \subseteq B$\\
+\\
+Ainsi, si $A \subseteq B$, alors $a \in B$ \\
+\\
+A est strictement compris dans B si $A \subseteq B$ et $A \neq B$\\
+{\em Notation}: $A \subset B$\\
+
+\subsection{Operations}
+Une operation peut se produire uniquement entre deux ensembles, pas entre un ensemble et un élément.
+\subsubsection{L'intersection}
+L'intersection de deux ensembles A et B est l'ensemble de nombres se trouvant dans A et dans B.\\
+{\em Notation:} $A \cap B$
+
+\subsubsection{L'union}
+L'union de deux ensembles A et B est l'ensemble de nombres se trouvant soit dans A soit dans B, soit dans les deux.\\
+{\em Notation:} $A \cup B$
+
+\subsection{Ensembles Étrangers}
+Deux ensembles sont dits étrangers si $A \cap B = \O \\$ 
+
+\subsection{Couples ordonnés}
+Un couple ordonné est un groupe \textbf{ordonné} de deux nombres, il se note $(a,b)$.\\
+\textbf{Attention:} $(a,b) \neq (b,a)$.\\
+Ainsi: $(a,b) = (c,d)$ uniquement si $a = c$ et $b = d$ \\.
+
+\subsection{Multiplication Cartesienne}
+La multiplication cartesienne de deux ensembles $A$ et $B$ est l'ensemble de tous les couples ordonnés $(x,y)$ tel que $x \in A$ et $y \in B$.\\
+Ainsi: $A*B = \{(x,y) | x \in A, y \in B \}$
+
+\subsection{Power Set}
+ Le power set d'un ensemble A est l'ensemble des sous ensembles de A.\\
+ {\em Notation:} $P(A)$\\
+ \textbf{Attention:} Les éléments de $P(A)$ sont eux mêmes des ensembles.\\
+ \textbf{Attention:} P(A) contient toujours \O.\\
+  
+
+\section{Propriétés}
+\subsection{Unions et Intersections}
+Si $A \subseteq B$, alors:\\ 
+$A \cap C \subseteq B \cap C$.\\
+$A \cup C \subseteq B \cup C$.\\
+\\
+Si $A \subseteq B$ et $B \subseteq C$, alors $A \subseteq C$\\
+\\
+$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$\\
+$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$\\
+  
+
+
+\section{Démonstrations}
+\subsection{$A \subseteq B$}
+Pour prouver que $A \subseteq B$, il faut prouver que n'import quel élément $a$ contenu dans $A$ est aussi contenu dans $B$.\\
+Ainsi: Il faut prouver que $a \subseteq A \Rightarrow a \subseteq B$.\\
+
+\subsection{$A = B$}
+Pour prouver que $A = B$, il faut prouver que $A \subseteq B$ et que 
+$B \subseteq A$.
+
+\subsection{$ A \subseteq B \Rightarrow A \cap C \subseteq B \cap C$\\}
+Soit $a \in A \cap C$, prouvons que $a \in B \cap C$.\\
+\\
+Si $a \in A \cap C$, alors $a \in A$ et $a \in C$.\\
+Mais puisque $A \subseteq B$, alors $a \in B$.\\
+Ainsi, puisque $a \in B$ et $a \in C$, $a \in B \cap C$.\\
+\\
+Donc $A \cap C \subseteq B \cap C$.
+
+\subsection{$ A \subseteq B \Rightarrow A \cup C \subseteq B \cup C$\\}
+
+Soit $a \in A \cup C$, prouvons que $a \in B \cup C$.\\
+\\
+Si $a \in A \cup C$, alors $a \in A$ ou $a \in C$.\\
+Dans le cas ou $a \in C$, alors $a \in B \cup C$.\\
+Dans le cas ou $a \in A$, puisque $A \subseteq B$ alors $a \in B$.\\
+Ainsi $a \in B \subseteq C$.
+\\
+Donc $A \cup C \subseteq B \cup C$
+
+\subsection{$R \subseteq S \Rightarrow R \cap S = R$ }
+Pour démontrer que deux ensembles sont égaux, il faut demontrer que chaque élément du premier est présent dans le deuxième.\\
+Ainsi, prouvons que:\\
+1)$ R \cap S \subseteq R$\\
+2)$ R \subseteq R \cap S$\\
+\\
+1) soit $a \in R \cap S$, alors $a \in R$ et $a \in S$, donc $a \in R$, et $R \cap S \subseteq R$.\\
+2) soit $a \in R$, puisque $R \subseteq S$, alors $a \in S$, ainsi $a \in R$ et $a \in S$, donc $a \in R \cap S$, et $R \subseteq R \cap S$.
+\\
+Ainsi, $R \cap S = R$.
+
+\subsection{$R \subseteq S \Rightarrow R \cup S = S$}
+Prouvons que:\\
+1)$R \cup S \subseteq S $\\
+2)$S \subseteq R \cup S $\\
+\\
+1)Soit $a \in R \cup S$, alors $a \in S$ ou $a \in R$, si $a \in S$, il n'y a rien a démontrer, si $a \in R$, puisque $R \subseteq S$, alors $a \in S$, donc $R \cup S \subseteq S$. \\
+2)Soit $a \in S$, alors par la definition de l'union, $a \in R \cup S$, donc $S \subseteq R \cup S$.
+\\
+Ainsi: $R \cup S = S$.
+\\
+\\
+\\
+\textbf{FIN.}
+\end{document}
+

@@ -1,0 +1,89 @@
+%
+%  2_nuples.tex
+%  latex_files
+%
+%  Created by Eyal Shukrun on 10/22/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+\RequirePackage[l2tabu, orthodox]{nag}
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,verbatim,graphicx,microtype,upquote,units,booktabs,siunitx,xcolor}
+\usepackage{cjhebrew}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{mymacros}
+
+
+
+\title{Espaces vectoriels}
+\author{Eyal Shukrun}
+
+\begin{document}
+\maketitle
+
+\section{Rappel}
+Soit deux vecteurs a et b et un scalaire f.
+  \begin{itemize}
+    \item $a+b = (a_1+b+1, a_2+b_2, \ldots, a_n + b_n)$
+    \item $a*f = (a_1*f, a_2*f, \ldots, a_n*f)$
+  \end{itemize}  
+
+\section{Espace vectoriel}
+L'ensemble des n-uples (\cjRL{ywt}\textbf{-n}, ensemble des groupes de taille $n$) d'un champ $F$ est noté $F^n$. $F^n$ est un espace vectoriel, c'est a dire un ensemble de vecteurs que l'on peut additioner entre eux et multiplier par un scalaire.  
+  
+\subsection{Proprietés}
+\begin{enumerate}
+  \item Si \textbf{a} et \textbf{b} sont des nuples de $F$ et $f$ un scalaire de $F$ alors $a+b \in F$ et $a*f \in F$
+\end{enumerate}
+ 
+\subsection{Vecteurs}
+Défini par sa longueur et sa direction. 
+
+\subsubsection{Proprietés}
+\begin{enumerate}
+  \item Additionner deux vecteur $(a_1, a_2)$ et $(b_1, b_2)$: $(a_1+b_1, a_2+b_2)$. Le resultat est le vecteur qui lest relie la queue de a a la tete de b. Le resultat de $a-b$ est le vecteur qui relie leurs deux tètes. 
+  \item Multiplier un vecteur $(a_1, a_2)$ par un scalaire $t$: $(a_1*t, a_2*t)$. Le résultat allonge ou raccourcit le vecteur, si $t < 0$ alors le vecteur change de direction.
+\end{enumerate}
+
+ 
+\subsection{Representation graphique de combinaisons linéaires}
+
+Nous ne parlerons ici que de systèmes linéaires a 2 ou 3 inconnues (car ils se représentent en 2D ou 3D). 
+
+\subsubsection{Intuition $^{[p.169]}$}
+  
+Si on prend un vecteur $a$ dans un plan en 3D, disons $(1,1,1)$, nous avons donc une flèche. Si on le multiplie par 2, la flèche devient 2 fois plus longue, ainsi si on trace tous les points qui sont touchés par $t*a$ en faisant varier  $t$, on obtient une droite.
+
+Maintenant, prenons un vecteur $x$ qui est l'addition de deux vecteurs $a+b$ (pas equivalents), disons $a=(1,0,0)$ et $b=(0,1,0)$, et faisons varier ces deux vecteurs, ainsi $x= t*a + s*b$, on sait deja que $t*a$ est une droite (et que $s*b$ aussi), pour chaque point sur la droite, on peut donc faire varier $s$ pour toucher n'importe quel point sur la droite $s*b$. Si on dessine tous les points pour chaque valeurs de $t$ et chaque valeurs de $s$, on obtient un plan.
+
+Si on ajoute un troisième vecteur a cette somme, et que $x = t*a + s*b + r*c$, en faisant varier t, s et r nous pourrons être capables de toucher n'importe quel point dans l'espace.  
+
+Attention, pour pouvoir jouer avec un vecteur, il faut qu'il ait un coefficient variable. Par exemple, le vecteur $x = t*a + s*b + c$ n'est qu'un plan, avec un shift de $c$, car  $c$ ne peut pas varier, tout comme $x = t*a + b$ n'est qu'une droite.
+
+On peut donc connaitre la representation graphique des solutions d'une equation grace a sa matrice escalier et a son nombre de lignes non-zeros. Plus il y a de lignes non-zeros, moins il y a de solutions (car plus de contraintes). Ainsi pour un système a 3 inconnues:
+\begin{enumerate}
+  \item Si elle n'a qu'une ligne non-zeros, la solution est un plan.
+  \item  Si elle a deux lignes non-zeros, la solution est une droite.
+  \item Si elle a trois lignes non-zeros, la solution est un point.
+    \item Si toutes ses lignes sont des zeros, alors n'importe quel vecteur resoud l'équation, donc la solution est tout l'espace.
+\end{enumerate}
+
+Évidemment, tout plan ou droite en plus de 3 dimensions a les mêmes propriétés. Plus généralement, une droite est exprimée sous la forme $t*a$ (a est un vecteur) et un plan sous la forme $t*a + s*b$ (a et b sont des vecteurs), ce plan est appelé le {\em span} (\cjRL{hpr/s}) de a et b.$^{[p.173]}$ 
+
+\subsection{Combinaisons linéaires}
+Une combinaison linéaire est la somme de plusieurs vecteurs, eux mêmes multipliés par des coefficients, ainsi soit $s_n$ des scalaires et $a_n$ des vecteurs, la combinaison linéaire s'exprime comme ceci:
+
+\begin{equation}
+  \sum_{i=1}^{n} a_i * s_i
+\end{equation}  
+
+\subsubsection{Combinaison de solutions d'un système}
+
+Si $(a_1, a_2, \ldots, a_n)$ sont n solutions d'un système \textbf{homogène}, alors pour chaque solution, on peut la multiplier par un scalaire, cela donnera toujours 0. Donc pour tout vecteur $(s_1, s_2, \ldots, s_n) $, $(s_1a_1 + s_2a_2 + \ldots + s_na_n)$ est aussi une solution.  
+
+Si d'un autre coté on a un système linéaire, le vecteur $b$ est une combinaison linéaire des vecteurs $(a_1, a_2, \ldots, a_n)$ et des coefficients $(s_1, s_2, \ldots, s_n)$ (les x, y, z etc..).$^{[p.180]}$
+
+
+\end{document}
