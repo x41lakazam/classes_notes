@@ -1,0 +1,69 @@
+%
+%  2_rapports.tex
+%  latex_files
+%
+%  Created by Eyal Shukrun on 10/25/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{pslatex}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[hebrew,english]{babel}
+\usepackage{cjhebrew}
+\usepackage{graphicx}
+\usepackage{mymacros}
+\usepackage{tikz-cd}
+
+
+\title{Relations - \cjRL{y.hsym} }
+\author{Eyal Shukrun}
+
+\begin{document}
+\maketitle
+
+\section{Tuples - \cjRL{zwg sdwr}}
+Liste de $n$ nombres (ordonnée).
+
+\subsection{Multiplication cartesienne}
+Multiplication cartesienne de $n$ ensembles: Tous les n-uples possibles composés des elements de chaque ensemble.
+\begin{align*}
+  A * B &= \{<a,b> | a \in A \land b \in B\}\\
+  A * B * C &= \{<a,b,c> | a \in A \land b \in B \land c \in C\}\\
+.\end{align*}
+
+Plus generalement: 
+\begin{equation}
+  A_1 * \ldots * A_n = \underset{i=1}{\overset{n}{\times}} A_i 
+\end{equation}
+
+Donc:
+\begin{equation}
+  (A*B)*C = \{<<a,b>, c>\}
+\end{equation}
+
+Ainsi la multiplication caresienne n'est pas associative.  
+
+\subsection{Propriétés}
+  \item A * (B \cup C) = (A*B) \cup (A*C)
+  \item A * (B \cap C) = (A*B) \cap (A*C)
+  \item A * (B \setminus  C) = (A*B) \setminus (A*C)
+
+\section{Relations}
+ 
+Une relation $R$ est un ensemble compose de n-uples (couples si c'est une relation a deux places (\cjRL{dw mqwmy}), 3 si c'est une relation a trois places etc). On l'appelle relation de A a B (ou relation sur A si elle est de A a A).\\
+Cette relation est l'ensemble des n-uples qui respectent une certaine règle (définie par nous), donc $R \in P(A*B)$
+. Pour exprimer un n-uple $<a,b>$ qui respecte R on peut utiliser $<a,b> \in R$ ou $aRb$. \\
+Pour representer une relation on peut utiliser soit une matrice ou chaque colonne est un n-uple qui respecte la relation, soit un diagramme a flèches, par exemple pour la relation $R = \{<1,a>, <2, a>\}$:
+
+
+\begin{tikzcd}
+  1 \arrow[r] & a \\
+  2 \arrow[ru] & b \\
+               & c \\
+\end{tikzcd}
+\end{document}
+

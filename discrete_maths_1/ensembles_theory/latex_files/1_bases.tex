@@ -1,0 +1,96 @@
+%
+%  1_ensembles.tex
+%  latex_files
+%
+%  Created by Eyal Shukrun on 10/25/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{pslatex}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage[hebrew,english]{babel}
+\usepackage{cjhebrew}
+\usepackage{graphicx}
+\usepackage{mymacros}
+
+
+\title{Bases}
+\author{Eyal Shukrun}
+
+\begin{document}
+\maketitle
+
+\section{Induction}
+\subsection{Induction classique $^{[p_9]}$}
+Prouver que c'est vrai pour $k=1$, puis prouver que c'est vrai pour $k=k+1$.
+\subsection{Induction etendue (\cjRL{mwrkbt})$^{[p_9]}$}
+Prouver que $P(m)$ est vrai, puis prouver que c'est vrai pour tous les $m < n$, ainsi on prouve que  $P(n)$ est vrai.
+
+\section{Recursion}
+On peut définir une fonction par recursion, en definissant $f(n_0)$ et $f(n+1)$ en fonction de $f(n)$.
+
+\section{Ensembles}
+
+\subsection{Ensembles de completion (\cjRL{qbw.sh hm/slymh})}
+L'ensemble de completion de A en fonction de U (noté $A^{c}(U)$) est l'ensemble des chiffres qu'il y a dans U et pas dans A. En bref: $A^{c}(U) = U \setminus A$, dans la plupart des cas, le U n'est pas note car il fait directement reference a l'ensemble Univers.
+
+\subsubsection{Propriétés}
+\begin{enumerate}
+  \item $A \cup A^{c} = U$ 
+  \item $A \cap A^{c} = \phi$ 
+  \item $(A^{c})^{c} = A$ 
+  \item $A \setminus B = A \cap B^{c}$
+  \item $(A \cup B)^{c} = A^{c} \cap B^{c}$
+  \item $(A \cap B)^{c} = A^{c} \cup B^{c}$
+\end{enumerate}
+  
+  
+\subsection{Notations de sous ensembles}
+\begin{enumerate}
+  \item "[": Inclus (ex: $[a,b] = \{x \in R | a \le x \le b\}$)
+  \item "(": Pas inclus (ex: $(a,b) = \{x \in R | a < x < b\}$) 
+\end{enumerate}
+  
+\subsection{Ensemble puissance (\cjRL{qbw.sh h.high})}
+Ensemble puissance de A: L'ensemble des sous ensembles possibles de A. La longueur de l'ensemble puissance d'un ensemble de taille n est $2^n$.$^{[p_{28}]}$ 
+
+\subsection{Operations sur des ensembles}
+\begin{enumerate}
+  \item Union - $ A \cup B$ 
+  \item  Intersection - $A \cap B$ 
+  \item Difference - $ A \setminus B$
+\end{enumerate}
+
+\paragraph{Propriétés}
+\begin{enumerate}
+\item $|A \cup B| = |A| + |B| - |A \cap B|$
+\end{enumerate}
+
+\subsection{Operations en chaine/infinies $^{[p.48]}$}
+\begin{itemize}
+  \item Union en chaine de tous les $A_i$ pour $i$ de 1 a $n$: tous les x qui sont dans au moins un A (notée $\underset{i=1}{\overset{n}{\cup }} A_i$) 
+  \item Intersection en chaine de tous les $A_i$ pour $i$ de 1 a $n$: tous les x qui sont dans tous les A (notée $ \underset{i=1}{\overset{n}{\cap }} A_i$).
+  \item  Union des $A_{\alpha}$: Ensemble des x qui sont dans au moins un $A_\alpha$ (notée $\underset{\alpha \in \Gamma}{\overset{}{\cup}} A_\alpha$)
+  \item  Intersection des $A_{\alpha}$: Ensemble des x qui sont dans tous les $A_\alpha$ (notée $\underset{\alpha \in \Gamma}{\overset{}{\cap}} A_\alpha$).
+\end{itemize}
+
+\paragraph{Propriétés}
+\begin{itemize}
+  \item Lois de morgan appliquables ($B \cap (\underset{\alpha \in \Gamma}{\overset{}{\cup }} A_\alpha) = \underset{\alpha \in \Gamma}{\overset{}{\cup}} (B \cap  A_\alpha)$ et $(\underset{\alpha \in \Gamma}{\overset{}{\cup }} A_\alpha)^{c} = \underset{\alpha \in \Gamma}{\overset{}{\cap }} (A_\alpha)^{c}$)
+\end{itemize}
+
+
+  
+  
+  
+  
+  
+  
+  
+
+\end{document}
+
