@@ -1,0 +1,611 @@
+%
+%  maman_11.tex
+%  latex_files
+%
+%  Created by Eyal Shukrun on 10/28/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{pslatex}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{mymacros}
+\usepackage{multicol}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[hebrew,english]{babel}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2cm]{geometry}
+
+\title{Maman 11}
+\selectlanguage{english}
+\author{Eyal Shukrun}
+
+\begin{document}
+\maketitle
+
+\selectlanguage{hebrew}
+\section{שאלה 1}
+\subsection{א(}
+\begin{align*}
+  \alpha &= 2*4 - 3*\frac{1}{2}\\
+  \alpha &= 8 - 3*3\\
+  \alpha &= 3 - 9\\
+  \alpha &= 3 - 4\\
+  \alpha &= 3 + 1\\
+  \alpha &= 4\\
+\end{align*} 
+
+\begin{align*}
+  \beta = \frac{2}{3} - \frac{3}{4}\\
+  \beta = 2*2 - 3*4\\
+  \beta = 4 - 2\\
+  \beta = 2\\
+\end{align*}
+
+\subsection{ב(}
+\begin{enumerate}
+ 
+\item 
+\begin{align*}
+  3x^{2} &= 5  \\
+  x^{2} &= 5 * 3^{-1}\\
+  x^{2} &= 5 * 5\\
+  x^{2} &= 25\\
+  x^{2} &= 4\\
+  x &= 2\\
+\end{align*}
+
+\clearpage
+\item 
+\begin{align*}
+  6x^{2} + \frac{1}{4} &= 0\\ 
+  6x^{2} + 2 &= 0\\ 
+  6x^{2} &= -2\\ 
+  x^{2} &= 5 * 6^{-1}\\ 
+  x^{2} &= 5 * 6\\ 
+  x^{2} &= 30\\ 
+  x^{2} &= 2\\ 
+  x &=  \sqrt{2} \\ 
+  x &=  \sqrt{9} \\ 
+  x &=  3 \\ 
+\end{align*}
+
+\item 
+\begin{align*}
+  &5x+4y+z = 0\\ 
+  &5x = -4y - z\\ 
+  &5x = 3y + 6z\\ 
+  &x = (3y + 6z)*5^{-1}\\ 
+  &x = (3y + 6z)*3\\ 
+  &x = 9y + 18z\\ 
+  &x = 2y + 4z\\ 
+  &x = 2(y + 2z)\\ 
+\end{align*}
+
+\fbox{\parbox{\textwidth}{
+למשוואה הזאת יש 94 פתרונות, הפתרון הכללי הוא: 
+\begin{equation*}
+  \{2t+4s, t, s | t, s \in Z_7 \}
+\end{equation*}
+}}
+
+\end{enumerate}
+
+\section{שאלה 2}
+
+\subsection{א(}
+  
+  
+על מנת לבדוק האם A הוא שדה,עלינו לבדוק את הנאים האלה:
+\begin{enumerate}
+  \item A סגוהר על $\oplus$ ו$*$\\
+    נגדיר $(a,1), (b,1) \in A$, לכן בהכרח $a, b \in R$, ובגלל ש$R$ שדה, אז גם $a+b \in R$ ו-$a*b \in R$. נובע מזה ש $(a+b,1) \in A$ ו-$(a*b, 1) \in A$, לכן A סגורה על הפעולות האלו.
+
+  \item $\oplus$ ו$*$ הן קיבוציות
+    \begin{align*}
+      (a,1) \oplus ((b,1) \oplus (c,1)) = (a,1) \oplus (b+c, 1) = (a+b+c, 1)\\
+      ((a,1) \oplus (b,1)) \oplus (c,1) = (a+b,1) \oplus (c, 1) = (a+b+c, 1)\\
+    \end{align*}
+    החיבור קיבוצית
+
+    \begin{align*}
+      (a,1) * ((b,1) * (c,1)) = (a,1) * (bc, 1) = (abc, 1)\\
+      ((a,1) * (b,1)) * (c,1) = (ab,1) * (c, 1) = (abc, 1)\\
+    \end{align*}
+    הכפל גם קיבוצית
+
+  \item $\bigoplus$ ו$*$ הן חילופיות
+    \begin{align*}
+      (a,1) \oplus (b,1) = (a+b, 1)\\
+      (b,1) \oplus (a,1) = (b+a, 1) = (a+b, 1)\\
+    \end{align*}
+    החיבור חילופית
+
+    \begin{align*}
+      (a,1) * (b,1) = (ab, 1)\\
+      (b,1) * (a,1) = (ba, 1) = (ab, 1)\\
+    \end{align*}
+
+    הכפל גם חילופית
+
+
+  \item קיימים $0_A$ ו$1_A$ שונים אחד מהשני
+    \begin{align*}
+      &(a,1) \oplus (0_A, 1) = (0_A, 1) \oplus (a, 1) = (a, 1)\\
+      \implies &0_A+a = a\\
+      \implies &0_A = 0
+    \end{align*}    
+    \begin{align*}
+      &(a,1) * (1_A, 1) = (1_A, 1) * (a, 1) = (a, 1)\\
+      \implies &1_A*a = a\\
+      \implies &1_A = 1
+    \end{align*}    
+    קיימים $0_A$ ו$1_A$ והם שונים אחד מהשני.
+
+
+  \item $*$ מתפלג על $\bigoplus$\\
+    \\
+    עלינו לבדוק כי
+    \begin{equation}
+      ((a,1)\oplus(b,1))*(c,1) = ((a,1)*(c,1)) \oplus ((b,1)*(c,1))
+    \end{equation}
+
+    \begin{align*}
+      ((a,1)\oplus(b,1))*(c,1) &= (a+b, 1)*(c,1)\\
+      &= (c(a+b), 1)\\
+      &= (a*c+b*c, 1)\\
+      ((a,1)*(c,1)) \oplus ((b,1)*(c,1)) &= (a*c, 1) \oplus (b*c, 1)\\
+      &= (a*c, 1) \oplus (b*c, 1)\\
+      &= (a*c + b*c, 1)\\
+    \end{align*}
+    מ.ש.ל
+
+  \clearpage
+  \item כל איבר הפיך ביחס ל$*$ וכל איבר פרט ל-$0_A$ הפיך ביחס ל$*$
+    \begin{align*}
+      (a,1) \oplus (-a, 1) &= (a + (-a), 1) = (0,1)\\
+      (a,1) * (a^{-1}, 1) &= (a*a^{-1}, 1) = (1,1)
+    \end{align*}
+    אך $a$ הוא איבר של $R$ \\
+    ולכל $a \in R$ קיים $-a \in R$ כך ש $a + (-a) = 0$ וקיים )פרט ל $a=0$(  $a^{-1}$ כך ש $a*a^{-1} = 1$ \\
+    לכן לכל $(a,1)$ קיים $-(a, 1) = (-(a), 1)$ ופרט ל $a=0$ קיים $(a, 1)^{-1} = (a^{-1}, 1)$
+\end{enumerate}
+
+\fbox{
+הוכחנו את כל התנאים מעלה, לכן $(A, \oplus, *)$ הוא שדה.
+}
+
+\subsection{ב(}
+  
+\paragraph{1(}
+כדי להוכיח שהפעולה חילופית , מספיק להוכיח ש $a*b=b*a$: 
+\begin{align*}
+  a*b &= b*a\\
+  a+b-2 &= b+a-2\\
+  a+b-2 &= a+b-2
+\end{align*}
+מ.ש.ל\\
+
+כדי להוכיח שהפעולה קיבוצית, מספיק להוכיח ש $(a*b)*c = a*(b*c)$: 
+\begin{align*}
+  (a*b)*c &= a*(b*c)\\
+  (a+b-2)+c-2 &= a+(b+c-2)-2 \\
+  a+b+c-4 &= a+b+c-4 \\
+\end{align*}
+מ.ש.ל\\
+
+\fbox{
+הפעולה $*$ היא חילופית וקיבוצית 
+}
+
+\paragraph{2(}
+נוכיח שקיים $x \in R$, איבר הניטרלי
+\begin{align*}
+  a*x = x*a = a\\
+  a+x-2 = a\\
+  x = a -a + 2\\
+  x = 2\\
+\end{align*}
+מ.ש.ל\\
+
+\fbox{\parbox{\textwidth}{
+קיים איבר ניטרלי לכל $a \in R$ והוא 2.
+}}
+
+\subsection{ג(}
+המשוואה הזאת נכונה ב$Z_9$:
+\begin{equation*}
+  3*3 = 0
+\end{equation*}
+אך משפט 6.2.1 טוען שאם $ab=0$ אז בהכרח $a=0$ או $b=0$, לכן המשוואה הזאת עומדת בסתירה לתכונות של האיבר הנגדי.
+\fbox{\parbox{\textwidth}{
+לכן $Z_9$ לא שדה.
+}}
+
+
+
+\section{שאלה 3}
+\subsection{א}
+  
+
+\begin{elimination}[1]{4}{2em}{1.1}
+    \eliminationstep
+    {
+1 & 2 & 1 & 1 & 1 \\
+1 & 1 & 2 & 1 & 2 \\
+1 & 1 & 1 & 0 & 2 \\
+2 & 1 & 1 & 1 & 2 
+    }
+    { 
+      \\
+       R_2 \to R_2 - R_1\\
+       R_3 \to  R_3 - R_1\\
+       R_4 \to  R_4 - 2*R_1 
+    }
+    \eliminationstep
+    {
+1 & 2 & 1 & 1 & 1 \\
+0 & -1 & 1 & 0 & 1 \\
+0 & -1 & 0 & -1 & 1 \\
+0 & -3 & -1 & -1 & 0 
+    }
+    { 
+      \\
+       R_2 \to -R_2 \\
+       R_3 \to  -R_3 \\
+       R_4 \to  -R_4  
+    }
+    \eliminationstep
+    {
+1 & 2 & 1 & 1 & 1 \\
+0 & 1 & -1 & 0 & -1 \\
+0 & 1 & 0 & 1 & -1 \\
+0 & 3 & 1 & 1 & 0 
+    }
+    { 
+      \\
+       R_3 \to  R_3 - R_2\\
+       R_4 \to  R_4 - 3*R_2
+    }
+    \eliminationstep
+    {
+1 & 2 & 1 & 1 & 1 \\
+0 & 1 & -1 & 0 & -1 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 4 & 1 & 3 
+    }
+    { 
+      \\
+      R_4 \to R_4 - 4*R_3
+    }
+    \eliminationstep
+    {
+1 & 2 & 1 & 1 & 1 \\
+0 & 1 & -1 & 0 & -1 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & -3 & 3 
+    }
+    { 
+      \\
+      R_1 \to R_1 - R_3 \\
+      R_4 \to  \frac{-R_4}{3}
+    }
+    \eliminationstep
+    {
+1 & 2 & 0 & 0 & 1 \\
+0 & 1 & -1 & 0 & -1 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1 & -1
+    }
+    { 
+    }
+\end{elimination}
+
+\begin{align*}
+  x + 2y = 1 &\implies x=1\\
+  y -z = -1 &\implies y=0\\
+  z +t =0 &\implies z = 1\\
+  t = -1 &\implies  t = -1\\
+\end{align*}
+
+\fbox{\parbox{\textwidth}{
+למערכת הזאת יש פתרון יחיד מעל R  והוא  $\left(\begin{smallmatrix}1 \\ 0 \\ 1 \\ -1\end{smallmatrix}\right)$.
+}}
+
+\subsection{ב}
+
+נתחיל ישר מ: 
+\begin{elimination}[1]{4}{3em}{1.1}
+  \eliminationstep
+  {
+    1 & 2 & 1 & 1 & 1 \\
+    0 & 1 & -1 & 0 & -1 \\
+    0 & 1 & 0 & 1 & -1 \\
+    0 & 3 & 1 & 1 & 0
+  }
+  {
+    \mod 3
+  }
+  \eliminationstep
+  {
+    1 & 2 & 1 & 1 & 1 \\
+    0 & 1 & 2 & 0 & 2 \\
+    0 & 1 & 0 & 1 & 2 \\
+    0 & 0 & 1 & 1 & 0
+  }
+  {
+    R_3 \to R_3 - R_2 
+  }
+  \eliminationstep
+  {
+    1 & 2 & 1 & 1 & 1 \\
+    0 & 1 & 2 & 0 & 2 \\
+    0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1 & 0
+  }
+  {
+    R_4 \to R_4 - R_3\\
+    R_1 \to R_1 - R_4
+  }
+  \eliminationstep
+  {
+    1 & 2 & 0 & 0 & 1 \\
+    0 & 1 & 2 & 0 & 2 \\
+    0 & 0 & 1 & 1 & 0 \\
+    0 & 0 & 0 & 0 & 0
+  }
+  {
+  }
+\end{elimination}
+  
+  \begin{align*}
+      x + 2y = 1 \implies x = 2t\\
+      y + 2z = 2 \implies y = 2+2t\\
+      z + t = 0 \implies z = -t
+  \end{align*}
+
+\fbox{\parbox{\textwidth}{
+על $Z_3$ יש למערכת הזאת אין סוף פתרונות, הפתרון הכללי הוא: 
+\begin{equation*}
+  \{2t, 2+2t, -t, t\} 
+\end{equation*}
+}}
+
+\section{שאלה 4}
+
+\begin{elimination}[1]{3}{3em}{1.1}
+  \eliminationstep
+  {
+1 & 2 & a & -3-a\\
+1 & 2-a & -1 & 1-a\\
+a & a & 1 & 6
+  }
+  {
+    R_2 \to R_2 - R_1\\
+    R_3 \to R_3 - a*R_1
+  }
+  \eliminationstep
+  {
+1 & 2 & a & -3-a\\
+0 & -a & -1-a & 4\\
+0 & -a & 1-a^2 & 6 + 3a + a^2
+  }
+  {
+    R_3 \to R_3 - R_2
+  }
+  \eliminationstep
+  {
+1 & 2 & a & -3-a\\
+0 & -a & -1-a & 4\\
+0 & 0 & 2-a^2+a & 2 + 3a + a^2
+  }
+  {
+    R_2 \to \frac{-R_2}{a} (a \neq 0)
+  }
+  \eliminationstep
+  {
+1 & 2 & a & -3-a\\
+0 & 1 & \frac{1+a}{a} & \frac{-4}{a}\\
+0 & 0 & 2-a^2+a & 2 + 3a + a^2
+  }
+  {
+    R_3 \to \frac{R_3}{2-a^2+a} (2-a^{2}+a \neq 0 \implies a \neq -1, a \neq 2)
+  }
+  \eliminationstep
+  {
+1 & 2 & a & -3-a\\
+0 & 1 & \frac{1+a}{a} & \frac{-4}{a}\\
+0 & 0 & 1 & \frac{2 + 3a + a^2}{2-a^2+a}
+  }
+  {
+  }
+\end{elimination}
+אם $2 + 3a + a^{2} = 0$ אז $R_3$ שורת סתירהת לכן $2 + 3a + a^{2} \neq 0$, ו$a \neq -1$, $a \neq -2$.
+\\
+אם $a =2$: 
+
+\begin{elimination}[1]{3}{3em}{1.1}
+  \eliminationstep
+  {
+1 & 2 & 2 & 1 \\
+0 & 1 & \frac{3}{2} & -2\\
+0 & 0 & 1 & 12
+  }
+  {
+  }
+\end{elimination}
+אין פתרון
+\\
+אם $a=0$: 
+
+\begin{elimination}[1]{3}{3em}{1.1}
+  \eliminationstep
+  {
+1 & 2 & 0 & 3 \\
+0 & 0 & -1 & 4 \\
+0 & 0 & 2 & 2
+  }
+  {
+  }
+\end{elimination}
+אין פתרון 
+\\
+אם $a=-2$: 
+\begin{elimination}[1]{3}{3em}{1.1}
+  \eliminationstep
+  {
+1 & 2 & -2 & 5 \\
+0 & 2 & 1 & 4 \\
+0 & 0 & -2 & 0
+  }
+  {
+  }
+\end{elimination}
+
+יש פתרון יחיד והוא $\left(\begin{smallmatrix}-3 \\ 4 \\ 0\end{smallmatrix}\right)$. 
+\\
+אם $a=-1$
+\begin{elimination}[1]{3}{3em}{1.1}
+  \eliminationstep
+  {
+1 & 2 & -1 & -2 \\
+0 & -1 & 0 & -4 \\
+0 & 0 & 0 & 0 \\
+  }
+  {
+  }
+\end{elimination}
+יש אין סוף פתרונות, הפתרון הכללי הוא:
+\begin{equation*}
+  \{s-10; 4; s\} 
+\end{equation*}
+
+
+\fbox{\parbox{\textwidth}{
+סיכום:
+
+\begin{itemize}
+  \item יש פתרון יחיד עבור: $a\neq-1$, $a \neq 2$, $a \neq 0$ 
+  \item  יש אין סוף פתרונות עבור: $a=-1$ 
+  \item אין פתרונות עבור: $a=0$, $a=-2$ 
+\end{itemize}
+}}
+
+
+
+\section{שאלה 5}
+   
+\begin{elimination}[1]{4}{4em}{1.1}
+  \eliminationstep
+  {
+    1 & a & a & a-b & b+1\\
+    1 & a+1 & a+b & 2a-b & a+b+1 \\
+    3 & 3a & 3a+b & 3a-b & 4b+3 \\
+    1 & a & a & 0 & 2b
+  }
+  {
+    R_2 \to R_2 - R_1\\
+    R_3 \to R_3 - 3*R_1 \\
+    R_4 \to R_4 - R_1
+  }
+  \eliminationstep
+  {
+    1 & a & a & a-b & b+1\\
+    0 & 1 & b & a & a \\
+    0 & 0 & b & 2b & b \\
+    0 & 0 & 0 & b-a & b+1
+  }
+  {
+    R_3 \to \frac{R_3}{b} (b \neq 0) \\
+    R_4 \to \frac{R_4}{b-a} (b \neq a)\\
+  }
+  \eliminationstep
+  {
+    1 & a & a & a-b & b+1\\
+    0 & 1 & b & a & a \\
+    0 & 0 & 1 & 2 & 1 \\
+    0 & 0 & 0 & 1 & \frac{b+1}{b-a}
+  }
+  {
+  }
+\end{elimination}
+
+עבור $b=0$
+ \begin{elimination}[1]{4}{3em}{1.1}
+  \eliminationstep
+  {
+    1 & a & a & a & 1\\
+    0 & 1 & 0 & a & a \\
+    0 & 0 & 0 & 0 & 0 \\
+    0 & 0 & 0 & a & 1
+  }
+  {
+  }
+\end{elimination}
+אם $a = 0$ אז $R_4$ שורת סתירה, ואין פתרון\\
+אם $a \neq 0$, אז יש למערכת פתרון כללי, והוא:
+\begin{equation*}
+  \{a(1-s) -a^{2}; a-1; s; \frac{1}{a}\} 
+\end{equation*}
+
+עבור $b=-1$
+ \begin{elimination}[1]{4}{3em}{1.1}
+  \eliminationstep
+  {
+    1 & a & a & a+1 & 0\\
+    0 & 1 & -1 & a & a \\
+    0 & 0 & 1 & 2 & 1 \\
+    0 & 0 & 0 & 1 & 0
+  }
+  {
+  }
+\end{elimination}
+יש פתרון יחיד. \\
+
+עבור $a=b$
+
+\begin{elimination}[1]{4}{3em}{1.1}
+  \eliminationstep
+  {
+    1 & a & a & 0 & a+1\\
+    0 & 1 & a & a & a \\
+    0 & 0 & 1 & 2 & 1 \\
+    0 & 0 & 0 & 0 & a+1
+  }
+  {
+  }
+\end{elimination}
+
+אם $a=-1$ אז $R_4$ שורת סתירה ואין פתרון, אחרת יש אין סוף פתרונות, ופתרון הכללי הוא:
+\begin{equation*}
+  \{-a^{2} + 2aw +1; aw ; 1-2w; w\} 
+\end{equation*}
+
+\fbox{\parbox{\textwidth}{
+סיכום: \\
+
+אין פתרון:
+\begin{itemize}
+  \item $b=0$ ו$a=0$
+  \item $b=-1$ ו$a=-1$
+\end{itemize}
+
+פתרון יחיד:
+\begin{itemize}
+  \item $b = -1$ )לכל $a$(
+\end{itemize}
+
+אין סוף פתרונות:
+\begin{itemize}
+  \item $b=0$ ו$a \neq 0$: $\{a(1-s) -a^{2}; a-1; s; \frac{1}{a}\}$
+  \item $a\neq -1$ ו$a=b$: $  \{-a^{2} + 2aw +1; aw ; 1-2w; w\} $
+\end{itemize}
+}}
+
+
+
+\end{document}
+
