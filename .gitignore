@@ -1,4 +1,5 @@
 tex_it.py
+tex_and_push.sh
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
