@@ -220,11 +220,7 @@
 \begin{equation*}
   3*3 = 0
 \end{equation*}
-אך משפט 6.2.1 טוען שאם $ab=0$ אז בהכרח $a=0$ או $b=0$, לכן המשוואה הזאת עומדת בסתירה לתכונות של האיבר הנגדי.
-\fbox{\parbox{\textwidth}{
-לכן $Z_9$ לא שדה.
-}}
-
+אך משפט 6.2.1 טוען שאם $ab=0$ אז בהכרח $a=0$ או $b=0$, לכן המשוואה הזאת עומדת בסתירה לתכונות של האיבר הנגדי, 
 
 
 \section{שאלה 3}
@@ -311,9 +307,7 @@
   t = -1 &\implies  t = -1\\
 \end{align*}
 
-\fbox{\parbox{\textwidth}{
 למערכת הזאת יש פתרון יחיד מעל R  והוא  $\left(\begin{smallmatrix}1 \\ 0 \\ 1 \\ -1\end{smallmatrix}\right)$.
-}}
 
 \subsection{ב}
 
@@ -366,13 +360,10 @@
       y + 2z = 2 \implies y = 2+2t\\
       z + t = 0 \implies z = -t
   \end{align*}
-
-\fbox{\parbox{\textwidth}{
 על $Z_3$ יש למערכת הזאת אין סוף פתרונות, הפתרון הכללי הוא: 
 \begin{equation*}
   \{2t, 2+2t, -t, t\} 
 \end{equation*}
-}}
 
 \section{שאלה 4}
 
@@ -412,7 +403,7 @@ a & a & 1 & 6
 0 & 0 & 2-a^2+a & 2 + 3a + a^2
   }
   {
-    R_3 \to \frac{R_3}{2-a^2+a} (2-a^{2}+a \neq 0 \implies a \neq -1, a \neq -2)
+    R_3 \to \frac{R_3}{2-a^2+a} (2-a^{2}+a \neq 0 \implies a \neq -1, a \neq 2)
   }
   \eliminationstep
   {
@@ -423,6 +414,22 @@ a & a & 1 & 6
   {
   }
 \end{elimination}
+אם $2 + 3a + a^{2} = 0$ אז $R_3$ שורת סתירהת לכן $2 + 3a + a^{2} \neq 0$, ו$a \neq -1$, $a \neq 2$.
+\\
+אם $a =2$: 
+
+\begin{elimination}[1]{3}{3em}{1.1}
+  \eliminationstep
+  {
+1 & 2 & 2 & 1 \\
+0 & 1 & \frac{3}{2} & -2\\
+0 & 0 & 1 & 12
+  }
+  {
+  }
+\end{elimination}
+אין פתרון
+\\
 אם $a=0$: 
 
 \begin{elimination}[1]{3}{3em}{1.1}
@@ -437,19 +444,19 @@ a & a & 1 & 6
 \end{elimination}
 אין פתרון 
 \\
-אם $a=-2$: 
+אם $a=2$: 
 \begin{elimination}[1]{3}{3em}{1.1}
   \eliminationstep
   {
-1 & 2 & -2 & 5 \\
-0 & 2 & 1 & 4 \\
-0 & 0 & -2 & 0
+1 & 2 & 2 & 1 \\
+0 & 1 & \frac{3}{2} & -2 \\
+0 & 0 & 0 & 12
   }
   {
   }
 \end{elimination}
+$R_4$ שורת סתירה, לכן אין פתרון
 
-יש פתרון יחיד והוא $\left(\begin{smallmatrix}-3 \\ 4 \\ 0\end{smallmatrix}\right)$. 
 \\
 אם $a=-1$
 \begin{elimination}[1]{3}{3em}{1.1}
@@ -467,18 +474,12 @@ a & a & 1 & 6
   \{s-10; 4; s\} 
 \end{equation*}
 
-
-\fbox{\parbox{\textwidth}{
-סיכום:
-
+\textbf{סיכום:}
 \begin{itemize}
-  \item יש פתרון יחיד עבור: $a\neq-1$,  $a \neq 0$, $a \neq -2$
-  \item  יש אין סוף פתרונות עבור: $a=-1$ 
-  \item אין פתרונות עבור: $a=0$, $a=-2$, 
+  \item יש פתרון יחיד עבור: $a\neq-1$, $a \neq 2$, $a \neq 0$ 
+\item  יש אין סוף פתרונות עבור: $a=-1$ 
+  \item אין פתרונות עבור: $a=0$, $a=2$ 
 \end{itemize}
-}}
-
-
 
 \section{שאלה 5}
    
