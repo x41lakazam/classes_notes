@@ -43,7 +43,7 @@ Défini par sa longueur et sa direction.
 
 \subsubsection{Proprietés}
 \begin{enumerate}
-  \item Additionner deux vecteur $(a_1, a_2)$ et $(b_1, b_2)$: $(a_1+b_1, a_2+b_2)$. Le resultat est le vecteur qui lest relie la queue de a a la tete de b. Le resultat de $a-b$ est le vecteur qui relie leurs deux tètes. 
+  \item Additionner deux vecteur $(a_1, a_2)$ et $(b_1, b_2)$: $(a_1+b_1, a_2+b_2)$. Le resultat est le vecteur qui relie la queue de a a la tete de b. Le resultat de $a-b$ est le vecteur qui relie leurs deux tetes.     
   \item Multiplier un vecteur $(a_1, a_2)$ par un scalaire $t$: $(a_1*t, a_2*t)$. Le résultat allonge ou raccourcit le vecteur, si $t < 0$ alors le vecteur change de direction.
 \end{enumerate}
 
@@ -62,7 +62,7 @@ Si on ajoute un troisième vecteur a cette somme, et que $x = t*a + s*b + r*c$, 
 
 Attention, pour pouvoir jouer avec un vecteur, il faut qu'il ait un coefficient variable. Par exemple, le vecteur $x = t*a + s*b + c$ n'est qu'un plan, avec un shift de $c$, car  $c$ ne peut pas varier, tout comme $x = t*a + b$ n'est qu'une droite.
 
-On peut donc connaitre la representation graphique des solutions d'une equation grace a sa matrice escalier et a son nombre de lignes non-zeros. Plus il y a de lignes non-zeros, moins il y a de solutions (car plus de contraintes). Ainsi pour un système a 3 inconnues:
+On peut donc connaitre la representation graphique des solutions d'une equation grace a sa matrice escalier et a son nombre de lignes non-zeros. Plus il y a de lignes non-zeros, moins il y a de solutions (car plus de contraintes). Visuellement, le nombre de lignes zeros correspond au nombre de vecteurs que l'on peut faire varier. Ainsi pour un système a 3 inconnues:
 \begin{enumerate}
   \item Si elle n'a qu'une ligne non-zeros, la solution est un plan.
   \item  Si elle a deux lignes non-zeros, la solution est une droite.
@@ -86,9 +86,47 @@ Si $(a_1, a_2, \ldots, a_n)$ sont n solutions d'un système \textbf{homogène}, 
 Si d'un autre coté on a un système linéaire, le vecteur $b$ est une combinaison linéaire des vecteurs $(a_1, a_2, \ldots, a_n)$ et des coefficients $(s_1, s_2, \ldots, s_n)$ (les x, y, z etc..).$^{[p.180]}$
 
 \subsubsection{Vecteur indépendants ( \cjRL{tlwt lyn'ryt})}
-Deux vecteurs a et b (ou plus) sont independants si on peut trouver des coefficients de combinaisons \textbf{non egaux a 0} tel que $\alpha*a + \beta*b = \textbf{0}$. Si les scalaires sont 0 alors les vecteurs ne sont pas independants ( \cjRL{tlwy lyn'ryt} ). \\
+Deux vecteurs a et b (ou plus) sont indépendants si $\alpha*a + \beta*b = \textbf{0}$ s'obtient uniquement avec des coefficients de combinaisons égaux a 0. Si au moins un scalaire n'est pas 0 alors les vecteurs ne sont pas indépendants ( \cjRL{tlwy lyn'ryt} ). \\
 
-Pour verifier si des vecteurs sont independants, les mettre dans une matrice a la verticale (la colonne des solutions est une colonne de 0). Si il y a plus d'une solution (donc si il y a des mishtanim hofshiim), ils sont indépendants (sinon, cela veut dire que la seule solution est la solution triviale).\\
+Pour verifier si des vecteurs sont indépendants, les mettre dans une matrice a la verticale (la colonne des solutions est une colonne de 0). Si il y a plus d'une solution (donc si il y a des mishtanim hofshiim), ils ne sont pas indépendants (sinon, cela veut dire que la seule solution est la solution triviale et qu'ils sont indépendants).\\
 
-Géométriquement parlant, des vecteurs indépendants ne sont pas dans la même direction (pas superposes). 
+Géométriquement parlant, des vecteurs indépendants ne sont pas dans la même direction (pas superposes), car si deux vecteurs sont superposes, on peut revenir a 0 en soustrayant l'un a l'autre, si ils ne sont pas dans la même direction, on ne peut pas les faire revenir a 0. \\
+
+Dans un groupe de vecteurs, il suffit qu'un seul ne soit pas indépendant des autres pour que tout le groupe soit dependant. Il en decoule que:
+\begin{itemize}
+  \item Un groupe de vecteurs qui contient un sous groupe dependant est lui aussi dependant, et un sous groupe d'un groupe indépendant est lui aussi indépendant.$^{[p.186]}$ 
+  \item Des vecteurs $ a_1, \ldots, a_k$ d'un espace $F^{n}$ sont forcement dependants si $k > n$, et si ils sont independants alors forcement  $k < n$ (car si il y a plus de vecteurs que de dimensions, et vu que l'on peut toucher n'importe quel point avec les n dimensions, on pourra forcement toucher le dernier vecteur).$^{[p.189]}$ 
+
+\end{itemize}
+
+\section{Base vectorielle}
+\subsection{Base standard}
+La base standard (\cjRL{bsys hs.tndr.ty}) d'un espace vectoriel composée de $ e_1, e_2, \ldots, e_n$ est l'ensemble des vecteurs de base d'un espace (vecteur avec un seul 1 et que des 0). La position du 1 dans le vecteur est l'index du $e$, par exemple, dans  $F^{5}$, $ e_3 = (0,0,1,0,0)$. Le span d'une base correspond a l'espace vectoriel entier (\cjRL{hbsys hs.tndr.ty pwr/s 't $F^{n}$}).\\
+N'importe quel point de l'espace est une combinaison de la base standard. \\
+
+\subsection{Base}
+Si une suite (ou un ensemble) de vecteurs $ a_1, \ldots, a_k$ span un espace $F^{n}$, alors $k \ge n$, et si en plus cette série est indépendante alors $k = n$.$^{[p.192]}$\\
+Donc si une suite de n vecteurs (ou un ensemble de n vecteurs différents) span un espace ou est indépendante, alors c'est la base de $F^{n}$.
+Une série de vecteurs qui span un espace est appelée la base ordonnée (\cjRL{bsys sdwr})$^{[p.193]}$\\
+L'ensemble des vecteurs de la serie est appelé  base (\cjRL{bsys}) si il est indépendant et qu'il span l'espace.\\
+Un ensemble d exactement $n$ vecteurs indépendants span forcement $F^{n}$ (pas vrai si $k \neq n$).$^{[p.194]}$ 
+
+Dans chaque base de $F^{n}$ il y a exactement $n$ vecteurs différents.\\
+
+Chaque vecteur de $F^{n}$ correspond a une seule et unique combinaison de la base (la suite, pas l'ensemble, car l'ensemble n'est pas ordonné). \\
+
+\subsubsection{Difference entre une suite et un ensemble}
+Dans un ensemble, il ne peut pas y avoir de doublon, donc pour tout vecteur $v \neq 0$, l'ensemble {v,v} est indépendant, mais la suite $v,v$ ne l'est pas. Il n'y a donc pas de difference sauf si deux elements sont égaux.
+  
+\subsubsection{Prouver qu'un ensemble de vecteurs est une base}
+Pour prouver qu'un ensemble (ou une suite) de vecteurs est une base il faut montrer que n'importe quel vecteur $b$ est une combinaison linéaire de ces vecteurs (voir p.195), ou montrer que le système homogène n'a pas de solution non triviale (en verifiant si sa matrice réduite est équivalente a la matrice identité, voir p.196). 
+
+\subsection{Parallèle avec des systèmes}
+Les vecteurs de la base d'un espace forment un système homogène a solution triviale: 
+\begin{equation}
+  s_1*a_1 + \ldots + s_n * a_n = 0
+\end{equation}
+Donc il n'existe qu'une seule et unique solution au système $s_1*a_1 + \ldots + s_n * a_n = b$$^{[p.198]}$ 
+  
+
 \end{document}

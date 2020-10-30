@@ -48,16 +48,17 @@ Donc:
 Ainsi la multiplication caresienne n'est pas associative.  
 
 \subsection{Propriétés}
-  \item A * (B \cup C) = (A*B) \cup (A*C)
-  \item A * (B \cap C) = (A*B) \cap (A*C)
-  \item A * (B \setminus  C) = (A*B) \setminus (A*C)
-
+\begin{itemize}
+  \item $A * (B \cup C) = (A*B) \cup (A*C)$
+  \item $A * (B \cap C) = (A*B) \cap (A*C)$
+  \item $A * (B \setminus  C) = (A*B) \setminus (A*C)$
+\end{itemize}
 \section{Relations}
  
 Une relation $R$ est un ensemble compose de n-uples (couples si c'est une relation a deux places (\cjRL{dw mqwmy}), 3 si c'est une relation a trois places etc). On l'appelle relation de A a B (ou relation sur A si elle est de A a A).\\
 Cette relation est l'ensemble des n-uples qui respectent une certaine règle (définie par nous), donc $R \in P(A*B)$
 . Pour exprimer un n-uple $<a,b>$ qui respecte R on peut utiliser $<a,b> \in R$ ou $aRb$. \\
-Pour representer une relation on peut utiliser soit une matrice ou chaque colonne est un n-uple qui respecte la relation, soit un diagramme a flèches, par exemple pour la relation $R = \{<1,a>, <2, a>\}$:
+Pour representer une relation on peut utiliser soit une matrice ou chaque colonne est un n-uple qui respecte la relation (l'élément en haut est l'élément de gauche du n-uple), soit par un tableau (les titres des lignes sont les elements de gauche, voir p.77), soit un diagramme a flèches, par exemple pour la relation $R = \{<1,a>, <2, a>\}$:
 
 
 \begin{tikzcd}
@@ -65,5 +66,7 @@ Pour representer une relation on peut utiliser soit une matrice ou chaque colonn
   2 \arrow[ru] & b \\
                & c \\
 \end{tikzcd}
+
+
 \end{document}
 
