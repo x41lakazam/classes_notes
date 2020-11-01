@@ -1,0 +1,98 @@
+%
+%  maman11.tex
+%  latex_files
+%
+%  Created by Eyal Shukrun on 11/01/20.
+%  Copyright 2020. Eyal Shukrun. All rights reserved.
+%
+
+\documentclass{article}
+\usepackage[pdftex]{graphicx}
+\usepackage{pslatex}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{graphicx}
+\usepackage{mymacros}
+
+\usepackage[utf8x]{inputenc}
+\usepackage[hebrew,english]{babel}
+\usepackage[top=2cm,bottom=2cm,left=2.5cm,right=2cm]{geometry}
+\selectlanguage{english}
+
+\title{}
+\author{Eyal Shukrun}
+
+\begin{document}
+\maketitle
+
+\selectlanguage{hebrew}
+\section{שאלה 1}
+\begin{itemize}
+  \item א - נכון
+  \item ב - לא נכון
+  \item ג - לא נכון
+  \item ד - לא נכון
+  \item ה - נכון
+  \item ו - לא נכון
+  \item ג - נכון
+  \item ח - נכון
+\end{itemize}
+
+
+\section{שאלה 2}
+\section{שאלה 3}
+\subsection{א}
+
+\subsection{ב}
+מתוך ההנחה ש-$A^{c} \Delta B = A \Delta  C $ נוכיח שנובע $C = B^{c} $.
+למען ההוכחה נשתמש בשני הוכחות:
+\begin{itemize}
+  \item שאלה 83: $A \Delta U = A^{c} $
+  \item שאלה 23: $A \Delta B = A \Delta C \implies B \Delta C$ והפעולה של הפרש סימטרי קיבוצית.
+\end{itemize}
+
+לפי שאלה 83: $A^{c} \Delta  B = (A \Delta  U) \Delta B$\\
+לפי שאלה 23: $(A \Delta U) \Delta B = A \Delta (U \Delta B)$\\
+שוב לפי 83: $A \Delta (U \Delta B) = A \Delta B^{c}$\\
+הגענו לשוויון: $A \Delta B^{c} = A \Delta C$, לכן לפי שאלה 23 נובע כי $A \Delta B^{c} = A \Delta C \implies  B^{c}  = C$, שזה מה שהיה צריך להוכיח. 
+
+\subsection{ג}
+
+מתוך הנחה ש-$x \in (A \cap  B) \setminus C$, נובע כי $x \in (A \cap B) $ וכי $x \not\in C $, אך לפי הגדרת ההפרש הסימטרי: $A \Delta B = (A \cup  B) \setminus  (A \cap  B)$, לכן בהכרח $x \notin A \Delta B$, כי $x \in (A \cap B)$.  \\
+מהנתון, $x \not\in C $, לכן אין צורך לבדוק ש-$x \not\in A \Delta C$ וש-$x \not\in B \Delta C$.\\
+הוכחנו ש-$x \in (A \cap  B) \setminus C \implies x \not\in A \Delta B \Delta C$.
+
+\section{שאלה 4}
+\subsection{א}
+משמעות הקבוצה  $A_n^{c}$ היא: כל המספרים הטבעיים הגדולים מ-$n$. לכן $\forall n \in N (A_0^{c} \subseteq A_n^{c})$.\\
+לפי הגדרת האיחוד: $\underset{n=0}{\overset{\infty}{\cup }} A_n^{c} = A_0^{c} = N \setminus \{0\}$
+  
+\subsection{ב}
+
+משמעות הקבוצה פה לא השתנה, אך הפעולה היא חיתוך ולא איחוד.\\
+לכן רק איבר שנמצא בכל הקבוצות יהיה בחיתוך. אך לכל $x \in N$ קיים קבוצה  $A_x^{c}$ שמשמעותה $\{a \in N | a > x \}$ ולכן $x \not\in A_x^{c}$.\\
+מזה נובע ש-$ \underset{n=0}{\overset{\infty}{\cap }} A_n = \varnothing$
+
+
+\subsection{ג}
+משמעות $(A_{2n} \setminus A_n)$ היא: כל האיברים מ-$n$ ל-$2n$, בלשון אחר: $\{x \in  N^{*} | n < x \le 2n \}$, 
+אפס הוא מיוחד מכוון ש-$0 = 2*0$, לכן אפשר להוציא אותו ממשמעות הכללי של הקבוצה,
+כי כמובן ש-$A_0 \setminus  A_0$ היא קבוצה ריקה. לכל $x$ פרט ל-1 אפשר למצוא $n \in N$ 
+כך ש-$n < x \le 2n$.\\
+ולכן $\underset{n=0}{\overset{\infty}{\cup }} (A_{2n} \setminus  A_n)$ מכילה את כל
+המספרים הטבעיים הגדולים מ-1.\\
+בלשון אחר: $\underset{n=0}{\overset{\infty}{\cup }} (A_{2n} \setminus  A_n) = N \setminus \{0,1\}$\\
+לכן היא לא שווה לאחת מהקבוצות $N$ ,  $N \setminus \{0\}$ , $ \varnothing $.
+
+
+\subsection{ד}
+כפי שכבר ראינו, $A_n^{c}$ היא קבוצה של כל המספרים הטבעיים הגדולים מ-$n$, כלומר ${x \in  N | x > n}$\\
+ולפי הגדרת $A$: משמעות $A_{n+1}$ היא כל המספרים הטבעיים מ-0 עד $n+1$, כלומר $\{x \in N | x \le n+1\}$.\\
+לכן לכל $n \in N$, $(A_{n+1} \cap A_n^{c}) = \{n+1\}$, ולכן לכל $x \in N^{*}$ 
+קיים: $x \in  (A_{x} \cap A_{x-1}^{c})$.\\
+לכן האיחוד הזה היא קבוצה של כל המספריים הטבעיים הגדולים מ-0, כלומר:\\
+$ \underset{n=0}{\overset{\infty}{\cup }} A_n = N \setminus \{0\}$
+
+
+
+\end{document}
+
