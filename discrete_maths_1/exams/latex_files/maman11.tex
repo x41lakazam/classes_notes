@@ -25,7 +25,7 @@
 \maketitle
 
 \selectlanguage{hebrew}
-\section{שאלה 1}
+\section*{שאלה 1}
 \begin{itemize}
   \item א - נכון
   \item ב - לא נכון
@@ -36,44 +36,88 @@
   \item ג - נכון
   \item ח - נכון
 \end{itemize}
+  
+
+\section*{שאלה 2}
+\subsection*{א(}
+נוכיח את השוויון הזה בעזרת אלגברה של הקבוצות:\\
+\begin{align*}
+  A \setminus (B \setminus  C) = (A \setminus B) \cup (A \cap C)\\ \intertext{לפי משפט 1.42:}
+  A \setminus (B \cap  C^{c}) = (A \cap  B^{c}) \cup (A \cap C) \\ 
+  A \cap (B \cap  C^{c})^{c} = (A \cap  B^{c}) \cup (A \cap C) \\  \intertext{לפי דה מורגן:}
+  A \cap (B^{c} \cup  C) = (A \cap  B^{c}) \cup (A \cap C) \\  \intertext{לפי חוק הפילוג}
+  (A \cap B^{c}) \cup (A \cap C) = (A \cap  B^{c}) \cup (A \cap C) \\ 
+\end{align*}
+
+משל
 
 
-\section{שאלה 2}
-\section{שאלה 3}
-\subsection{א}
+\subsection*{ב(}
 
-\subsection{ב}
-מתוך ההנחה ש-$A^{c} \Delta B = A \Delta  C $ נוכיח שנובע $C = B^{c} $.
+מתוך הנחה ש-$\{A\} \subseteq P(B)$, בהכרח $A \in P(B)$ ולכן A היא תת-קבוצה של B )לפי הגדרה של הקבוצת החזקה(.\\
+היחס $ \subseteq $ הוא טרנזיטיבי, כלומר  כל תת-קבוצה של A גם תת-קבוצה של B.\\
+נניח בשלילה ש-$P(A)  \nsubseteq P(B)$, לכן קיים תת-קבוצה של A שהיא לא תת קבוצה של B, וזה עומד בסתירה
+עם הטענה מעל.\\ 
+לכן חייב להתקיים $P(A)  \subseteq P(B)$.
+
+\subsection*{ג(}
+נניח בשלילה ש-$B \nsubseteq A \land A \nsubseteq B $. נוכיח שקיים איבר ב-$P(A \cup B)$
+שלא קיים ב-$P(A) \cup P(B)$.\\
+מההנחה מעל נובע שקיים $x \in A, y \in B$ כך ש-$x \not\in B$ ו-$y \not\in A$.\\
+לפי הגדרת האיחוד: $x,y \in A \cup B$. לכן $\{x,y\}$ היא תת-קבוצה של $A \cup B$
+ו-$\{x,y\} \in P(A\cup B)$.\\
+אך מכוון ש-$x \not\in B$, ברור כי $\{x\} \not\in P(B)$, וחמשיבה דומה,
+$\{y\} \not\in P(A)$.\\
+לכן $\{x,y\} \nsubseteq A$ ו-$\{x,y\} \nsubseteq B$, 
+כלומר $\{x,y\}$ לא תת-קבוצה של A או של B, ולכן  $\{x,y\} \not\in P(A)$ 
+ו-$\{x,y\} \not\in  P(B)$, ולפי הגדרת האיחוד: $\{x,y\} \not\in P(A) \cup P(B)$, 
+קיבלנו סתירה עם הנתון, לכן הוכחנו ש-$P(A \cup B) = P(A) \cup  P(B) \implies B \subseteq A \lor A \subseteq B $.
+
+\section*{שאלה 3}
+\subsection*{א(}
+נניח בשלילה ש-$A \neq U$, כלומר קיים $x \not\in A$.\\
+נפשט את הטענה $(A \cap  B)^{c} \subseteq A$:
+\begin{align*}
+  \intertext{לפי דה מורגן:} A^{c} \cup B^{c} \subseteq A\\ \intertext{לפי משפט 1.21}
+  A^{c} \cup B^{c} \subseteq A \implies A^{c} \subseteq A \land B^{c} \subseteq A \\ \intertext{לכן}
+  A^{c} \subseteq A
+\end{align*}
+אך אם קיים $x \not\in A$ אז $x \in A^{c}$, ולכן $A^{c} \nsubseteq A$. 
+קילבנו פה סתירה, לכן אם $(A \cap  B)^{c} \subseteq A$ אז $A=U$. \\
+
+
+\subsection*{ב(}
+מתוך ההנחה ש-$A^{c} \Delta B = A \Delta  C $ נוכיח ש-$C = B^{c} $.\\
 למען ההוכחה נשתמש בשני הוכחות:
 \begin{itemize}
   \item שאלה 83: $A \Delta U = A^{c} $
   \item שאלה 23: $A \Delta B = A \Delta C \implies B \Delta C$ והפעולה של הפרש סימטרי קיבוצית.
 \end{itemize}
-
 לפי שאלה 83: $A^{c} \Delta  B = (A \Delta  U) \Delta B$\\
 לפי שאלה 23: $(A \Delta U) \Delta B = A \Delta (U \Delta B)$\\
 שוב לפי 83: $A \Delta (U \Delta B) = A \Delta B^{c}$\\
 הגענו לשוויון: $A \Delta B^{c} = A \Delta C$, לכן לפי שאלה 23 נובע כי $A \Delta B^{c} = A \Delta C \implies  B^{c}  = C$, שזה מה שהיה צריך להוכיח. 
 
-\subsection{ג}
+
+\subsection*{ג(}
 
 מתוך הנחה ש-$x \in (A \cap  B) \setminus C$, נובע כי $x \in (A \cap B) $ וכי $x \not\in C $, אך לפי הגדרת ההפרש הסימטרי: $A \Delta B = (A \cup  B) \setminus  (A \cap  B)$, לכן בהכרח $x \notin A \Delta B$, כי $x \in (A \cap B)$.  \\
 מהנתון, $x \not\in C $, לכן אין צורך לבדוק ש-$x \not\in A \Delta C$ וש-$x \not\in B \Delta C$.\\
 הוכחנו ש-$x \in (A \cap  B) \setminus C \implies x \not\in A \Delta B \Delta C$.
 
-\section{שאלה 4}
-\subsection{א}
+\section*{שאלה 4}
+\subsection*{א(}
 משמעות הקבוצה  $A_n^{c}$ היא: כל המספרים הטבעיים הגדולים מ-$n$. לכן $\forall n \in N (A_0^{c} \subseteq A_n^{c})$.\\
 לפי הגדרת האיחוד: $\underset{n=0}{\overset{\infty}{\cup }} A_n^{c} = A_0^{c} = N \setminus \{0\}$
   
-\subsection{ב}
+\subsection*{ב(}
 
 משמעות הקבוצה פה לא השתנה, אך הפעולה היא חיתוך ולא איחוד.\\
 לכן רק איבר שנמצא בכל הקבוצות יהיה בחיתוך. אך לכל $x \in N$ קיים קבוצה  $A_x^{c}$ שמשמעותה $\{a \in N | a > x \}$ ולכן $x \not\in A_x^{c}$.\\
 מזה נובע ש-$ \underset{n=0}{\overset{\infty}{\cap }} A_n = \varnothing$
 
 
-\subsection{ג}
+\subsection*{ג(}
 משמעות $(A_{2n} \setminus A_n)$ היא: כל האיברים מ-$n$ ל-$2n$, בלשון אחר: $\{x \in  N^{*} | n < x \le 2n \}$, 
 אפס הוא מיוחד מכוון ש-$0 = 2*0$, לכן אפשר להוציא אותו ממשמעות הכללי של הקבוצה,
 כי כמובן ש-$A_0 \setminus  A_0$ היא קבוצה ריקה. לכל $x$ פרט ל-1 אפשר למצוא $n \in N$ 
@@ -84,7 +128,7 @@
 לכן היא לא שווה לאחת מהקבוצות $N$ ,  $N \setminus \{0\}$ , $ \varnothing $.
 
 
-\subsection{ד}
+\subsection*{ד(}
 כפי שכבר ראינו, $A_n^{c}$ היא קבוצה של כל המספרים הטבעיים הגדולים מ-$n$, כלומר ${x \in  N | x > n}$\\
 ולפי הגדרת $A$: משמעות $A_{n+1}$ היא כל המספרים הטבעיים מ-0 עד $n+1$, כלומר $\{x \in N | x \le n+1\}$.\\
 לכן לכל $n \in N$, $(A_{n+1} \cap A_n^{c}) = \{n+1\}$, ולכן לכל $x \in N^{*}$ 
