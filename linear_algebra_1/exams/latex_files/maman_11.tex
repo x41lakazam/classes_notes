@@ -296,21 +296,50 @@
 0 & 0 & 0 & 1 & -1
     }
     { 
+      R_1 \to R_1 - 2*R_2
+    }
+    \eliminationstep
+    {
+1 & 0 & 2 & 0 & 3 \\
+0 & 1 & -1 & 0 & -1 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1 & -1
+    }
+    { 
+      R_1 \to R_1 - 2*R_3\\
+      R_2 \to R_2 + R_3
+    }
+    \eliminationstep
+    {
+1 & 0 & 0 & -2 & 3 \\
+0 & 1 & 0 & 1 & -1 \\
+0 & 0 & 1 & 1 & 0 \\
+0 & 0 & 0 & 1 & -1
+    }
+    { 
+      R_1 \to R_1 + 2*R_4\\
+      R_2 \to R_2 - R_4\\
+      R_3 \to R_3 - R_4
+    }
+    \eliminationstep
+    {
+1 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 \\
+0 & 0 & 0 & 1 & -1
+    }
+    { 
+      R_1 \to R_1 + 2*R_4\\
+      R_2 \to R_2 - R_4\\
+      R_3 \to R_3 - R_4
     }
 \end{elimination}
-
-\begin{align*}
-  x + 2y = 1 &\implies x=1\\
-  y -z = -1 &\implies y=0\\
-  z +t =0 &\implies z = 1\\
-  t = -1 &\implies  t = -1\\
-\end{align*}
 
 למערכת הזאת יש פתרון יחיד מעל R  והוא  $\left(\begin{smallmatrix}1 \\ 0 \\ 1 \\ -1\end{smallmatrix}\right)$.
 
 \subsection{ב}
 
-נתחיל ישר מ: 
+נתחיל ישר משלב זה כי עד אז לא ביצענו שום פעולה אסורה מעל $Z_3$: 
 \begin{elimination}[1]{4}{3em}{1.1}
   \eliminationstep
   {
@@ -413,7 +442,7 @@ a & a & 1 & 6
   {
   }
 \end{elimination}
-אם $a =2$: 
+עבור  $a =2$: 
 
 \begin{elimination}[1]{3}{3em}{1.1}
   \eliminationstep
@@ -427,7 +456,7 @@ a & a & 1 & 6
 \end{elimination}
 יש פתרון יחיד
 \\
-אם $a=0$: 
+עבור  $a=0$: 
 
 \begin{elimination}[1]{3}{3em}{1.1}
   \eliminationstep
@@ -442,7 +471,7 @@ a & a & 1 & 6
 אין פתרון 
 \\
 
-אם $a=-1$
+עבור  $a=-1$
 
 \begin{elimination}[1]{3}{3em}{1.1}
   \eliminationstep
