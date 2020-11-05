@@ -335,7 +335,7 @@
     }
 \end{elimination}
 
-למערכת הזאת יש פתרון יחיד מעל R  והוא  $\left(\begin{smallmatrix}1 \\ 0 \\ 1 \\ -1\end{smallmatrix}\right)$.
+מכוון שאין משתנה חופשי, למערכת הזאת יש פתרון יחיד מעל R  והוא  $\left(\begin{smallmatrix}1 \\ 0 \\ 1 \\ -1\end{smallmatrix}\right)$.
 
 \subsection{ב}
 
@@ -359,38 +359,39 @@
     0 & 0 & 1 & 1 & 0
   }
   {
-    R_3 \to R_3 - R_2 
+    R_1 \to R_1 - 2*R_3
+    R_3 \to R_3 - R_2
   }
   \eliminationstep
   {
-    1 & 2 & 1 & 1 & 1 \\
+    1 & 0 & 0 & 1 & 0 \\
     0 & 1 & 2 & 0 & 2 \\
     0 & 0 & 1 & 1 & 0 \\
     0 & 0 & 1 & 1 & 0
   }
   {
-    R_4 \to R_4 - R_3\\
-    R_1 \to R_1 - R_4
+    R_2 \to R_2 - 2*R_3
+    R_4 \to R_4 - R_3
   }
   \eliminationstep
   {
-    1 & 2 & 0 & 0 & 1 \\
-    0 & 1 & 2 & 0 & 2 \\
+    1 & 0 & 0 & 1 & 0 \\
+    0 & 1 & 0 & 1 & 2 \\
     0 & 0 & 1 & 1 & 0 \\
     0 & 0 & 0 & 0 & 0
   }
   {
   }
 \end{elimination}
-  
   \begin{align*}
-      x + 2y = 1 \implies x = 2t\\
-      y + 2z = 2 \implies y = 2+2t\\
-      z + t = 0 \implies z = -t
+    x + t &= 0 \implies x = -t \\
+    y + t &= 2 \implies y = 2-t\\
+    z + t &= 0 \implies z = -t\\
   \end{align*}
-על $Z_3$ יש למערכת הזאת יותר מפתורון אחד, הפתרון הכללי הוא: 
+על $Z_3$ יש משתנה חופשי אחד והוא $t$ וכל שאר המשתנים קשוריים,
+לכן יש למערכת הזאת יותר מפתרון, הפתרון הכללי הוא: 
 \begin{equation*}
-  \{2t, 2+2t, -t, t\} 
+  \{-t, 2-t, -t, t\} 
 \end{equation*}
 מכוון ש-$t$ הוא מספר ב- $Z_3$, יש למערכת 3 פתרונות.
 
