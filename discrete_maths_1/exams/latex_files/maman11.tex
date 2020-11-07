@@ -53,10 +53,9 @@
 
 
 \subsection*{ב(}
-
 מתוך הנחה ש-$\{A\} \subseteq P(B)$, בהכרח $A \in P(B)$ ולכן A היא תת-קבוצה של B )לפי הגדרה של הקבוצת החזקה(.\\
 היחס $ \subseteq $ הוא טרנזיטיבי, כלומר  כל תת-קבוצה של A גם תת-קבוצה של B.\\
-נניח בשלילה ש-$P(A)  \nsubseteq P(B)$, לכן קיים תת-קבוצה של A שהיא לא תת קבוצה של B, וזה עומד בסתירה
+כדי להוכיח ש-$\{A\} \subseteq P(B) \implies P(A) \subseteq P(B)$, נניח בשלילה ש-$P(A)  \nsubseteq P(B)$, ולכן קיים תת-קבוצה של A שהיא לא תת קבוצה של B, וזה עומד בסתירה
 עם הטענה מעל.\\ 
 לכן חייב להתקיים $P(A)  \subseteq P(B)$.
 
@@ -100,10 +99,10 @@ $\{y\} \not\in P(A)$.\\
 
 
 \subsection*{ג(}
-
 מתוך הנחה ש-$x \in (A \cap  B) \setminus C$, נובע כי $x \in (A \cap B) $ וכי $x \not\in C $, אך לפי הגדרת ההפרש הסימטרי: $A \Delta B = (A \cup  B) \setminus  (A \cap  B)$, לכן בהכרח $x \notin A \Delta B$, כי $x \in (A \cap B)$.  \\
-מהנתון, $x \not\in C $, לכן אין צורך לבדוק ש-$x \not\in A \Delta C$ וש-$x \not\in B \Delta C$.\\
-הוכחנו ש-$x \in (A \cap  B) \setminus C \implies x \not\in A \Delta B \Delta C$.
+לפי שאלה 23א, $A \Delta B \Delta  C = (A \Delta B) \Delta C$, לכן $x \in (A \Delta B) \Delta C$ אם ורק אם 
+$x \in (A \Delta B) \land x \not\in C$ או $x \in C \land x \not\in (A \Delta B)$. \\
+כבר הוכחנו ש-$x \not\in (A \Delta B)$ וש-$x \not\in C$ לכן לא יתכן אף מצב דלעיל, ובהכרח $x \in (A \cap  B) \setminus C \implies x \not\in A \Delta B \Delta C$.
 
 \section*{שאלה 4}
 \subsection*{א(}
