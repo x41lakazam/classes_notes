@@ -624,10 +624,51 @@ a & a & 1 & 6
   {
   }
 \end{elimination}
+אם $a \neq 1$ אז $R_4$ היא שורת סתירה, נחשב עבור $a = 1$: 
+
+\begin{elimination}[1]{4}{3em}{1.1}
+  \eliminationstep
+  {
+    1 & 1 & 1 & 0 & 2\\
+    0 & 1 & 1 & 1 & 1 \\
+    0 & 0 & 1 & 2 & 1 \\
+    0 & 0 & 0 & 0 & 0
+  }
+  {
+    R_1 \to R_1 - R_2
+  }
+  \eliminationstep
+  {
+    1 & 0 & 0 & -1 & 1\\
+    0 & 1 & 1 & 1 & 1 \\
+    0 & 0 & 1 & 2 & 1 \\
+    0 & 0 & 0 & 0 & 0
+  }
+  {
+    R_2 \to R_2 - R_3
+  }
+  \eliminationstep
+  {
+    1 & 0 & 0 & -1 & 1\\
+    0 & 1 & 0 & -1 & 0 \\
+    0 & 0 & 1 & 2 & 1 \\
+    0 & 0 & 0 & 0 & 0
+  }
+  {
+  }
+\end{elimination}
+\clearpage
+\begin{align*}
+  x - w &= 1 \implies x = 1 + w\\
+  y - w &= 0 \implies y = t\\
+  z + 2w &= 1 \implies z = 1 - 2t\\
+  w &= t
+\end{align*}
 
 אם $a \neq 1$ אז $R_4$ שורת סתירה ואין פתרון, אחרת קיים אין סוף פתרונות למערכת, פתרון הכללי הוא: 
+
 \begin{align*}
-  \{1-t, t, 1+2t, t\}
+  \{1+t, t, 1-2t, t\}
 \end{align*}
 
 \fbox{\parbox{\textwidth}{
@@ -647,11 +688,10 @@ a & a & 1 & 6
 אין סוף פתרונות:
 \begin{itemize}
   \item $b=0 \land a \neq 0$:$\{-a(a-1) - at, a-1, t, \frac{1}{a}\}$
-    \item $a=b=1$: $\{1-t, t, 1+2t, t\}$
+    \item $a=b=1$: $\{1+t, t, 1-2t, t\}$
+
 \end{itemize}
 }}
-
-
 
 \end{document}
 
